@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#130d12">
+    <meta name="description" content="Discover makeup and skincare favorites at GLOW & BLUSH. Your glow, your rules.">
+    <title>GLOW & BLUSH | Beauty & Skincare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="#hero">GLOW <span>&</span> BLUSH</a>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#SHOP">Shop</a>
+                <a href="#ABOUT">About</a>
+                <a href="#CONTACT">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="cart-trigger" id="cartcount" type="button" aria-label="Open shopping bag"
+                    aria-expanded="false" aria-controls="cart-panel">
+                    <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span>
+                    <span id="count" class="cart-count">0</span>
+                </button>
+                <span id="total" class="nav-total">Rs. 0</span>
+            </div>
+            <div id="cart-panel" class="cart-panel" hidden>
+                <div class="cart-heading">
+                    <h2>My Beauty Bag <span aria-hidden="true">♡</span></h2>
+                    <button id="close-cart" class="icon-button" type="button" aria-label="Close shopping bag">×</button>
+                </div>
+                <div id="cart-items" class="cart-items">
+                    <p class="empty-cart">Your beauty bag is waiting for you.</p>
+                </div>
+                <div class="cart-footer">
+                    <p id="cart-total">Total: Rs. 0</p>
+                    <button id="continue-shopping" class="button button-primary" type="button">Continue
+                        shopping</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <video class="hero-video" autoplay muted loop playsinline poster="hero-poster.jpg" aria-hidden="true">
+                <source src="beauty.mp4" type="video/mp4">
+            </video>
+            <div class="hero-shade"></div>
+            <div class="hero-content">
+                <p class="eyebrow">A LITTLE LUXURY, EVERY DAY</p>
+                <h1>Your glow.<br><em>Your rules.</em></h1>
+                <p class="hero-description">Beauty favorites that make every day feel a little more special.</p>
+                <a class="button button-primary" href="#SHOP">Explore the collection <span
+                        aria-hidden="true">↗</span></a>
+            </div>
+            <span class="hero-side-note">GLOW FROM WITHIN</span>
+        </section>
+
+        <section id="SHOP" class="shop-section section-wrap reveal">
+            <div class="section-heading">
+                <p class="eyebrow">THE BEAUTY EDIT</p>
+                <h2>Find your <em>favorites</em></h2>
+                <p>Discover beauty essentials picked to make you feel your best.</p>
+            </div>
+            <div class="shop-tools">
+                <label class="search-box">
+                    <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                    <input type="search" id="product-search" placeholder="Search your beauty favorites..."
+                        aria-label="Search products">
+                </label>
+                <div class="category-filters" aria-label="Filter products by category">
+                    <button type="button" id="all-btn" class="filter-btn active" aria-pressed="true">All
+                        products</button>
+                    <button type="button" id="makeup-btn" class="filter-btn" aria-pressed="false">Makeup</button>
+                    <button type="button" id="skincare-btn" class="filter-btn" aria-pressed="false">Skincare</button>
+                </div>
+            </div>
+            <div class="products" aria-live="polite"></div>
+            <p id="no-products" class="no-products" hidden>We couldn't find that one. Try another search. ♡</p>
+        </section>
+
+        <section id="ABOUT" class="about-section section-wrap reveal">
+            <div class="about-copy">
+                <p class="eyebrow">OUR STORY</p>
+                <h2>Beauty is about feeling <em>like you.</em></h2>
+                <p>At <strong>GLOW & BLUSH</strong>, we believe everyone deserves to feel beautiful and confident. We
+                    bring together makeup and skincare favorites to make your everyday beauty routine feel special.</p>
+            </div>
+            <div class="mission-card">
+                <span class="mission-icon material-symbols-outlined" aria-hidden="true">auto_awesome</span>
+                <p class="eyebrow">OUR MISSION</p>
+                <h3>Confidence looks good on you.</h3>
+                <p>Our mission is to make beauty simple, fun, and accessible — so you can express yourself in your own
+                    way.</p>
+            </div>
+            <div class="about-decoration" aria-hidden="true">G&B</div>
+        </section>
+
+        <section id="CONTACT" class="contact-section section-wrap reveal">
+            <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+            <h2>Let's stay <em>connected.</em></h2>
+            <p>Have a question or feedback? Get in touch with us.</p>
+            <div class="contact-links">
+                <a href="mailto:info@glowandblush.com"><span class="material-symbols-outlined"
+                        aria-hidden="true">mail</span>Email us</a>
+                <a href="https://www.instagram.com/glowandblush/" target="_blank" rel="noopener noreferrer"><span
+                        class="material-symbols-outlined" aria-hidden="true">photo_camera</span>Instagram</a>
+                <a href="https://wa.me/COUNTRYCODENUMBER" target="_blank" rel="noopener noreferrer"><span
+                        class="material-symbols-outlined" aria-hidden="true">chat</span>WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+
+        <a class="brand" href="#hero">GLOW <span>&</span> BLUSH</a>
+        <p>Your glow, your rules.</p>
+        <small>© <span id="year"></span> GLOW & BLUSH. All rights reserved.</small>
+
+        <p class="developer-signature">
+            Designed & Developed with 💜 by VK
+        </p>
+    </footer>
+</body>
+
+</html>
